@@ -1,0 +1,222 @@
+/* General Page Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container Box */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+/* Heading */
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Task Input Section */
+.task-input {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.task-input input, 
+.task-input select, 
+.task-input button {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.task-input input {
+    flex: 1;
+    background: #f3f3f3;
+    border: 1px solid #ddd;
+}
+
+.task-input select {
+    background: #ffdd57;
+    cursor: pointer;
+}
+
+.task-input button {
+    background: #28a745;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.task-input button:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Filter Section */
+.filter-section {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-section select {
+    padding: 8px;
+    background: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Task Columns */
+.task-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.task-column {
+    width: 48%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    min-height: 200px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.task-column h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Task Cards */
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    color: #333;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    cursor: grab;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.2s ease-in-out;
+}
+
+.task:hover {
+    transform: scale(1.03);
+}
+
+/* Priority Colors */
+.high { border-left: 5px solid red; background: #ffe5e5; }
+.medium { border-left: 5px solid orange; background: #fff4e5; }
+.low { border-left: 5px solid green; background: #e5ffe5; }
+
+/* Delete Button */
+.deleteBtn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    transition: 0.2s;
+}
+
+.deleteBtn:hover {
+    background: darkred;
+}
+
+/* Progress Bar */
+.progress {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+progress {
+    width: 100%;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #ddd;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #ddd;
+    border-radius: 6px;
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(to right, #ff6f61, #ffa36c);
+    border-radius: 6px;
+}
+
+/* Countdown Timer */
+.countdown {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Overdue Tasks */
+.overdue {
+    color: red;
+    font-weight: bold;
+}
+
+/* Tasks Approaching Deadline */
+.warning {
+    color: orange;
+    font-weight: bold;
+}
+
+/* Smooth Fade-in Animation */
+.task {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .task-container {
+        flex-direction: column;
+    }
+    .task-column {
+        width: 100%;
+    }
+    .task-input {
+        flex-direction: column;
+    }
+    .task-input input, .task-input select, .task-input button {
+        width: 100%;
+    }
+}

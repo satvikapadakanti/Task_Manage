@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="task.css">
+    <script defer src="task.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>📌 Task Manager</h1>
+        
+        <!-- Task Input Section -->
+        <div class="task-input">
+            <input type="text" id="taskName" placeholder="Enter task..." required>
+            <input type="date" id="taskDueDate" required>
+            <select id="taskPriority">
+                <option value="high">🔥 High</option>
+                <option value="medium">⚡ Medium</option>
+                <option value="low">✅ Low</option>
+            </select>
+            <button id="addTaskBtn">➕ Add Task</button>
+        </div>
+
+        <!-- Task Filter Section -->
+        <div class="filter-section">
+            <label>Filter:</label>
+            <select id="filterPriority">
+                <option value="all">All Priorities</option>
+                <option value="high">🔥 High</option>
+                <option value="medium">⚡ Medium</option>
+                <option value="low">✅ Low</option>
+            </select>
+            <select id="filterStatus">
+                <option value="all">All Tasks</option>
+                <option value="pending">⏳ Pending</option>
+                <option value="completed">✔️ Completed</option>
+            </select>
+        </div>
+
+        <!-- Task List -->
+        <div class="task-container">
+            <div class="task-column pending" id="pendingTasks">
+                <h2>⏳ Pending Tasks</h2>
+            </div>
+            <div class="task-column completed" id="completedTasks">
+                <h2>✔️ Completed Tasks</h2>
+            </div>
+        </div>
+
+        <!-- Progress Tracker -->
+        <div class="progress">
+            <label>📊 Progress:</label>
+            <progress id="progressBar" value="0" max="100"></progress>
+            <span id="progressText">0%</span>
+        </div>
+    </div>
+</body>
+</html>
